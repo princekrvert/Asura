@@ -47,13 +47,13 @@ def banner():
         @@@@@@@@@@ {y}@@@{g} @@@@@@@@@@  
           @@@@@@@  {y}@@@{g}  @@@@@@@    
              @@@@  {y}@@@{g}  @@@@       
-              {r} Prince kumar """)
+              {r}made by Prince kumar """)
 banner()
 
 
 #Banner making end here-------------------------
 #First chekck for interner connection
-def internet():
+def internet(): 
     try:
         res = requests.get("https://google.com")
         if res.status_code == 200:
@@ -146,7 +146,7 @@ def host_optn(server):
     print(f"{p}[{g}~{p}] {w} Link generating option")
     print()
     print(f"{w}[{y}01{w}] {g} Localhost")
-    print(f"{w}[{y}02{w}] {g} Ngrok--not--available-")
+    print(f"{w}[{y}02{w}] {g} Ngrok")
     print()
     h_optn = input(f"{r}[{w}×{r}] {y} Choose option: ")
     if h_optn == "1" or h_optn == "01":
