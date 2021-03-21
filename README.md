@@ -15,8 +15,8 @@
 1. git clone https://github.com/princekrvert/Asura.git
 2. cd Asura
 3. chmod +x *
-4. ./install.sh
-#### ./asura.py
+4. ./install.sh 
+or ./asura.py
 
 
 ```
