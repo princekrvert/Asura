@@ -47,7 +47,7 @@ def banner():
         @@@@@@@@@@ {y}@@@{g} @@@@@@@@@@  
           @@@@@@@  {y}@@@{g}  @@@@@@@    
              @@@@  {y}@@@{g}  @@@@       
-{pu}   Made by princeWeb{w}: {r} Prince kumar """)
+              {r} Prince kumar """)
 banner()
 
 
