@@ -11,13 +11,12 @@
 ---
 ## Termux installation
 ```
-1. apt-get install python && pkg install python2;pkg install python3
-2. pip3 install requests
-3. apt-get install php;apt-get install git
-4. git clone https://github.com/princekrvert/Asura.git
-5. cd Asura
-6. chmod +x *
-7. ./asura.py
+
+1. git clone https://github.com/princekrvert/Asura.git
+2. cd Asura
+3. chmod +x *
+4. ./install.sh
+#### ./asura.py
 
 
 ```
