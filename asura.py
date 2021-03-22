@@ -1,6 +1,6 @@
 #!/data/data/com.termux/files/usr/bin/python3
 #@Author prince kumar 
-# Date 12 jan 2020
+# Modified on Date 22 march 2020
 # this script is only for educational purposes
 #Import all requirements----------------------
 import sys
@@ -47,7 +47,7 @@ def banner():
         @@@@@@@@@@ {y}@@@{g} @@@@@@@@@@  
           @@@@@@@  {y}@@@{g}  @@@@@@@    
              @@@@  {y}@@@{g}  @@@@       
-              {r}made by Prince kumar """)
+              {r}made by Prince kumar V1.02""")
 banner()
 
 
