@@ -4,30 +4,13 @@ Copyright © 2024 NAME HERE <EMAIL ADDRESS>
 package cmd
 
 import (
-	"fmt"
-	"os"
-	"path/filepath"
+
+	//"path/filepath"
 
 	"github.com/spf13/cobra"
 )
 
 // Make a function to check the available sites.
-func isAvl(path string site string) (bool,filePath string) {
-	// now check if folder is available ..
-	_,err:=os.Stat(path)
-	if err!=nil{
-		fmt.Println("\033[31;1m Some required file has been removed, please run git pull into your terminal and run the script again..")
-		os.Exit(1)
-	}
-return true, "path/sites"
-}
-// Make function to check the inp field so we can host the page and get the variable ..
-func checkInp(site string) []string{
-
-// this function will return a slice of string with inp variable..
-fmt.Println("write your login for the extract the inp field.")
-rerutn ["whoami","hostname"]
-}
 
 // startCmd represents the start command
 var startCmd = &cobra.Command{
@@ -36,11 +19,11 @@ var startCmd = &cobra.Command{
 	Long:  `This commnad is used to start the local server for the several websites`,
 	Run: func(cmd *cobra.Command, args []string) {
 		// now first display the menue ..
-		fmt.Println("\033[31;1m Our websites list will be here")
+		//fmt.Println("\033[31;1m Our websites list will be here")
 		// now make a function to check the available sites.
-		isAvl("site")
+		//isAvl("site")
 		// now make a regx function to extract the line with input field ..
-		checkInp("site_path")// this function will return the input field's variables so we can host that page 
+		//checkInp("site_path")// this function will return the input field's variables so we can host that page
 
 	},
 }
